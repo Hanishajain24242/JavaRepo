@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Management Portal</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        nav { margin-bottom: 20px; background: #333; padding: 10px; }
+        nav a { color: white; margin-right: 15px; text-decoration: none; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#registration">Registration</a>
+        <a href="#view">View Students</a>
+    </nav>
+
+    <section id="registration">
+        <h2>Student Registration</h2>
+        <form action="/submit" method="POST">
+            <input type="text" placeholder="First Name" required maxlength="50">
+            <input type="text" placeholder="Last Name" required maxlength="50"><br><br>
+            
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone (10 digits)" pattern="[0-9]{10}" required><br><br>
+            
+            <label>DOB:</label> <input type="date" required><br><br>
+            
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male" required> Male
+            <input type="radio" name="gender" value="female"> Female<br><br>
+            
+            <textarea placeholder="Address" required maxlength="200"></textarea><br><br>
+            
+            <label>Course:</label>
+            <select required>
+                <option value="">--Select Course--</option>
+                <option value="CS">Computer Science</option>
+                <option value="IT">Information Technology</option>
+                <option value="ECE">Electronics</option>
+            </select><br><br>
+            
+            <button type="submit">Register Student</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <section id="view">
+        <h2>Registered Students</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Course</th>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>Computer Science</td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+</html>
