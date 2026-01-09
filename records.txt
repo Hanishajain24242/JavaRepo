@@ -1,0 +1,2 @@
+101,Alice Smith,alice@mail.com,Computer Science
+102,Bob Johnson,bob@mail.com,Business
